@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 </head>
-<h1>
-    Data Peserta
-</h1>
 <body>
+    <h1 class="text-center">Data Peserta</h1>
+    <div class="container-lg mt-3">
     <nav>
         <a href="pendaftaran.php">[+]Pendaftaran</a>
     </nav>
@@ -23,7 +23,9 @@
 	</form>
     </nav>
     <br>
-    <table border=1>
+    
+    <div class="card">
+    <table class="table table-bordered" class="">
         <tr>
             <th>no</th>
             <th>ID Peserta</th>
@@ -55,7 +57,11 @@ include 'connect.php';
         }
 ?>
     </table>
+</div>
+<br>
+<a href="sertifikasi.php">Halaman Sertifikasi</a>
+    </div>
     <br>
-    <a href="sertifikasi.php">Halaman Sertifikasi</a>
+    <script>type="text/javascript" src="js/bootstrap.js"</script>
 </body>
 </html>

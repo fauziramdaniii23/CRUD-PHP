@@ -8,8 +8,21 @@
 </head>
 <body>
 <h3>Pendaftaran Peserta</h3>
+<?php
+    include 'connect.php';
+    $query = mysqli_query($conn, "SELECT max(id) as idTerbesar FROM peserta");
+    $data = mysqli_fetch_array($query);
+    $idPeserta = $data[idTerbesar];
+    $urutan = (int) substr($idPeserta, 6);
+    $urutan++
+    $idPeserta = sprintf("%03s", $urutan);
+    ?>
 <form action="" method="post">
     <table>
+    <tr>
+            <td>ID Peserta</td>
+            <td><input type="text" name="id" value="<?php echo $idPeserta ?>"></td>
+        </tr>
         <tr>
             <td>Kode Skema</td>
             <td>
